@@ -9,5 +9,21 @@
   <body>
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
+    <style>
+      body, #app {
+          max-width: 1000px;
+          margin: 0;
+        }
+      @media (max-width: 720px){
+        body, #app {
+          max-width: 720px;
+        }
+      }
+      @media (max-width: 320px){
+        body, #app {
+          max-width: 320px;
+        }
+      }
+    </style>
   </body>
 </html>

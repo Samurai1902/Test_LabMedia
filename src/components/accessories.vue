@@ -12,11 +12,11 @@
                 <hr class="card-line-down">
                 <p class="card-text">Для любителей роскоши, модель S10+ будет выпускаться в керамическом корпусе черного и белого цветов.</p>
             </div>
-            <div class="card">
+            <div class="card card3">
                 <hr class="card-line-up">
                 <p class="card-text">Galaxy S10+ в режиме Dex поддерживает широкоформатные мониторы. Мощный смартфон превращается в мощный десктоп.</p>
             </div>
-            <div class="card">
+            <div class="card card4">
                 <hr class="card-line-up">
                 <p class="card-text">Смартфон S10 сразу укомплектован защитной пленкой.</p>
             </div>
@@ -75,7 +75,17 @@
     line-height: 24px;
     text-align: left;
     margin: 0;
-    width: 223px;
+    max-height: 120px;
+    max-width: 222px;
+    word-break: keep-all;
+    overflow: auto;
+    scrollbar-width: none; /* Для Firefox */
+}
+.card3 .card-text {
+    max-height: 144px;
+}
+.card-text::-webkit-scrollbar {
+    display: none;
 }
 .card-line-down{
     width: 222px;
@@ -110,9 +120,13 @@
         max-width: 325px;
     }
     .card-text{
-        width: 325px;
+        max-width: 325px;
+        max-height: 105px;
         font-size: 14px;
         line-height: 21px;
+    }
+    .card3 .card-text, .card4 .card-text, .card3 p, .card4 p {
+        max-height: 63px;
     }
     .card-line-down{
         width: 325px;
@@ -120,6 +134,36 @@
     .card-img {
         max-width: 325px;
         width: 325px;
+    }
+}
+
+@media (max-width: 320px){
+    .accessories{
+        width: 290px;
+        margin: 0px 15px 70px 15px;
+    }
+    .accessories-title{
+        width: 290px;
+        font-size: 22px;
+        line-height: 31px;
+        margin: 0px 0px 30px 0px;
+    }
+    .accessories-cards{
+        max-width: 290px;
+        gap: 30px 7px;
+    }
+    .card{
+        max-width: 290px;
+        max-height: max-content;
+    }
+    .card-img, .card-text{
+        max-width: 290px;
+    }
+    .card3 .card-text, .card4 .card-text, .card3 p, .card4 p {
+        max-height: 105px;
+        max-width: 140px;
+        font-size: 12px;
+        line-height: 17px;
     }
 }
 </style>

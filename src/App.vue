@@ -35,4 +35,13 @@ import Services from './components/services.vue'
         width: 670px;
     }
 }
+@media (max-width: 320px) {
+    .Opportunities-title{
+        width: 290px;
+        height: 80px;
+        margin: 30px 15px;
+        font-size: 30px;
+        line-height: 40px;
+    }
+}
 </style>

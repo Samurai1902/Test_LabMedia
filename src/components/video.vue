@@ -72,15 +72,23 @@
     flex-direction: row;
     align-items: center;
     gap: 21px;
+    max-height: 144px;
 }
 .card-info p{
-    width: 343px;
+    max-height: 144px;
+    max-width: 343px;
     font-family: PT Root UI;
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
     text-align: left;
     margin: 0;
+    word-break: keep-all;
+    overflow: auto;
+    scrollbar-width: none; /* Для Firefox */
+}
+.card-info::-webkit-scrollbar {
+    display: none;
 }
 .card-info img{
     margin: 0px 20px 0px 21px;
@@ -102,16 +110,61 @@
     }
     .card-info{
         max-width: 325px;
-        max-height: 173px;
+        max-height: 189px;
     }
     .card-info p{
         font-size: 14px;
         line-height: 21px;
+        max-height: 189px;
     }
     .finger-cards-img{
         max-width: 325px;
         max-height: 173px;
     }
+}
+
+@media (max-width: 320px){
+    .finger{
+        max-width: 320px;
+        margin: 0px 0px 70px 0px;
+    }
+    .finger-line, .finger-title{
+        max-width: 290px;
+        font-size: 22px;
+        line-height: 31px;
+    }
+    .finger-title{
+        margin: 20px 15px 30px 15px;
+    }
+    .finger-cards{
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        max-width: 320px;
+    }
+    .finger-cards-img{
+        max-width: 320px;
+        max-height: 170px;
+    }
+    .card-info{
+        flex-direction: column;
+        max-width: 290px;
+        max-height: 206px;
+        gap: 20px;
+    }
+    .card-info p{
+        max-width: 290px;
+        font-size: 14px;
+        line-height: 21px;
+        max-height: 126px !important;
+    }
+    .card{
+        align-items: center;
+        max-width: 290px;
+        max-height: max-content;
+        gap: 30px;
+    }
+
 }
 
 </style>
